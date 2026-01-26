@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Favorite Recipes</title>
+    <meta charset="utf-8">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #d5d5c3;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 1px;
+        }
+
+        section {
+            margin: 20px;
+            padding: 15px;
+            background-color: #ffffff;
+            border-radius: 8px;
+        }
+
+        section a {
+            color: #4CAF50;
+            font-weight: bold;
+        }
+
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+
+        th {
+            background-color: #4CAF50;
+            color: white;
+            text-align: left;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .steps {
+            background-color: #d7c3c0;
+            padding: 10px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .sources a {
+            color: #0288D1;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>My Favorite Recipes</h1>
+    </header>
+
+    <section>
+        <h2>Table of Contents:</h2>
+        <ol>
+            <li><a href="#recipe-1">Chocolate Chip Cookies</a></li>
+            <li><a href="#recipe-2">Spaghetti Carbonara</a></li>
+            <li><a href="#recipe-3">Avocado Toast</a></li>
+        </ol>
+    </section>
+
+    <section id="recipe-1">
+        <h2>Chocolate Chip Cookies</h2>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Chocolate_chip_cookies.jpg/1280px-Chocolate_chip_cookies.jpg"
+            alt="Chocolate Chip Cookies">
+        <ul>
+            <li>Time: 30 minutes</li>
+            <li>Serves: 24 cookies</li>
+        </ul>
+        <table>
+            <thead>
+                <tr>
+                    <th>Ingredient</th>
+                    <th>Quantity</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>All-purpose flour</td>
+                    <td>2 1/4 cups</td>
+                </tr>
+                <tr>
+                    <td>Butter</td>
+                    <td>1 cup</td>
+                </tr>
+                <tr>
+                    <td>Brown sugar</td>
+                    <td>3/4 cup</td>
+                </tr>
+                <tr>
+                    <td>Granulated sugar</td>
+                    <td>3/4 cup</td>
+                </tr>
+                <tr>
+                    <td>Chocolate chips</td>
+                    <td>2 cups</td>
+                </tr>
+                <tr>
+                    <td>Eggs</td>
+                    <td>2 large</td>
+                </tr>
+                <tr>
+                    <td>Vanilla extract</td>
+                    <td>1 tsp</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="steps">
+            <h3>Steps:</h3>
+            <p><strong>Step 1:</strong> Preheat the oven to 350°F (175°C).</p>
+            <p><strong>Step 2:</strong> Cream the butter and sugars together until light and fluffy.</p>
+            <p><strong>Step 3:</strong> Add eggs and vanilla extract, then mix well.</p>
+            <p><strong>Step 4:</strong> Gradually add flour, then fold in chocolate chips.</p>
+            <p><strong>Step 5:</strong> Scoop dough onto a baking sheet and bake for 10-12 minutes.</p>
+        </div>
+        <p class="sources">Source: <a href="https://www.allrecipes.com/recipe/10813/best-chocolate-chip-cookies/"
+                target="_blank">AllRecipes</a></p>
+    </section>
+
+    <section id="recipe-2">
+        <h2>Spaghetti Carbonara</h2>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Spaghetti_alla_Carbonara_%28Madrid%29.JPG/420px-Spaghetti_alla_Carbonara_%28Madrid%29.JPG"
+            alt="Spaghetti Carbonara">
+        <ul>
+            <li>Time: 20 minutes</li>
+            <li>Serves: 4</li>
+        </ul>
+        <table>
+            <thead>
+                <tr>
+                    <th>Ingredient</th>
+                    <th>Quantity</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Spaghetti</td>
+                    <td>400 grams</td>
+                </tr>
+                <tr>
+                    <td>Egg yolks</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>Parmesan cheese</td>
+                    <td>1/2 cup</td>
+                </tr>
+                <tr>
+                    <td>Pancetta</td>
+                    <td>150 grams</td>
+                </tr>
+                <tr>
+                    <td>Black pepper</td>
+                    <td>to taste</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="steps">
+            <h3>Steps:</h3>
+            <p><strong>Step 1:</strong> Cook spaghetti until al dente.</p>
+            <p><strong>Step 2:</strong> Fry pancetta until crispy.</p>
+            <p><strong>Step 3:</strong> Whisk egg yolks with Parmesan cheese and pepper.</p>
+            <p><strong>Step 4:</strong> Combine pasta with pancetta and remove from heat.</p>
+            <p><strong>Step 5:</strong> Quickly mix in egg mixture to create a creamy sauce.</p>
+        </div>
+        <p class="sources">Source: <a href="https://www.giallozafferano.com/recipes/Spaghetti-Carbonara.html"
+                target="_blank">Giallo Zafferano</a></p>
+    </section>
+
+    <section id="recipe-3">
+        <h2>Avocado Toast</h2>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Avocado_toast_at_Voyager_Espresso_%2833134505776%29.jpg/330px-Avocado_toast_at_Voyager_Espresso_%2833134505776%29.jpg"
+            alt="Avocado Toast">
+        <ul>
+            <li>Time: 10 minutes</li>
+            <li>Serves: 2</li>
+        </ul>
+        <table>
+            <thead>
+                <tr>
+                    <th>Ingredient</th>
+                    <th>Quantity</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Bread slices</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>Avocado</td>
+                    <td>1 large</td>
+                </tr>
+                <tr>
+                    <td>Lemon juice</td>
+                    <td>1 tsp</td>
+                </tr>
+                <tr>
+                    <td>Salt</td>
+                    <td>to taste</td>
+                </tr>
+                <tr>
+                    <td>Red chili flakes</td>
+                    <td>optional</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="steps">
+            <h3>Steps:</h3>
+            <p><strong>Step 1:</strong> Toast the bread slices until golden brown.</p>
+            <p><strong>Step 2:</strong> Mash the avocado with lemon juice and salt.</p>
+            <p><strong>Step 3:</strong> Spread the avocado mixture on the toast.</p>
+            <p><strong>Step 4:</strong> Sprinkle red chili flakes if desired and serve.</p>
+        </div>
+        <p class="sources">Source: <a href="https://www.loveandlemons.com/avocado-toast/" target="_blank">Love and
+                Lemons</a></p>
+    </section>
+
+</body>
+
+</html>

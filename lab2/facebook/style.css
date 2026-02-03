@@ -1,0 +1,134 @@
+body {
+    font-family: SFProDisplay-Regular, Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+}
+
+.body-holder {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 72px;
+}
+
+.container {
+    padding: 10vh 37vh;
+}
+
+.left{
+    width: 580px;
+    padding-top: 62px;
+}
+
+.left p {
+    font-size: 28px;
+    line-height: 32px;
+    margin-top: -10px;
+    /* Попробуй уменьшить или убрать */
+}
+
+.right{
+    padding: 20px;
+    padding-top: 20px;
+    padding-bottom: 25px;
+    border-radius: 10px;
+    width: 51vh;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, .1), 0px 8px 16px rgba(0, 0, 0, .1);
+    position: relative;
+    background: white;
+    margin-right: 15px;
+}
+
+.img img {
+    width: 320px;
+    height: 120px;
+    text-align: start;
+    position: relative;
+    margin: -31px 0px 0px -29px;
+
+}
+
+.img {
+    margin-right: 20px;
+    text-align: start;
+    align-items: start;
+}   
+
+button {
+    border: none;
+    background-color: #1877f2;
+    color: #fff;
+    margin: auto;
+    width: 100%;
+    display: block;
+    border-radius: 5px;
+    padding: 10px 6px;
+    font-weight: bold;
+    cursor: pointer;
+    height: 50px;
+    font-size: 18px;
+}
+
+.f-pws {
+    text-align: center;
+    text-decoration:none;
+    display: block;
+    width: 200px;
+    margin: center;
+    color: #1877f2;
+    padding-left: 80px;
+    font-weight: 400;
+}
+
+.line {
+    border-top: 1px solid #222;
+    opacity: 0.2;
+}
+
+.bnt2 {
+    width: 64%;
+    font-size: 17px;
+    background-color: #42b72a;
+    text-align: center;
+    height: 50px;
+    border-radius: 8px;
+}
+
+input[type="text"],
+input[type="password"] {
+    height: 25px;
+    display: block;
+    background-color: #fff;
+    margin:auto;
+    border: 1.5px solid rgb(225, 225, 225);
+    width: 340px;
+    padding: 8px 10px;
+    border-radius: 5px;
+    color: black;
+    font-size: 15px;
+    height: 30px;
+}
+
+.right input:focus{
+    border: 1.5px solid #1877f2;
+    outline: none;
+    caret-color: #1877f2;
+}
+
+.sub-link {
+    width: 55vh;
+    position: relative;
+    text-align: center;
+    color: rgb(61, 61, 61);
+    font-family: 'Segoe UI', Arial;
+    padding: 130px 890;
+    font-size: 14.5px;
+    font-weight: 600;
+}
+
+.sub-link a {
+    text-decoration: none;
+    color: black;
+    font-size: 15px;
+    font-weight: bold;
+}

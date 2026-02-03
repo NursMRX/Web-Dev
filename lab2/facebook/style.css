@@ -8,7 +8,7 @@ body {
 .body-holder {
     display: flex;
     justify-content: space-around;
-    padding-top: 72px;
+    padding-top: 32px;
 }
 
 .container {
@@ -17,22 +17,22 @@ body {
 
 .left{
     width: 580px;
-    padding-top: 62px;
+    padding-top: 82px;
+    padding-left: 100px;
 }
 
 .left p {
     font-size: 28px;
     line-height: 32px;
-    margin-top: -10px;
-    /* Попробуй уменьшить или убрать */
+    margin-top: -19px;
 }
 
 .right{
-    padding: 20px;
-    padding-top: 20px;
+    padding: 1px;
+    padding-top: 15px;
     padding-bottom: 25px;
-    border-radius: 10px;
-    width: 51vh;
+    border-radius: 8px;
+    width: 396px;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, .1), 0px 8px 16px rgba(0, 0, 0, .1);
     position: relative;
     background: white;
@@ -61,23 +61,29 @@ button {
     margin: auto;
     width: 100%;
     display: block;
-    border-radius: 5px;
-    padding: 10px 6px;
+    border-radius: 8px;
+    padding: 11px 6px;
     font-weight: bold;
     cursor: pointer;
     height: 50px;
     font-size: 18px;
 }
+.submit {
+    padding-top: 10px;
+    width: 360px;
 
+}
 .f-pws {
     text-align: center;
-    text-decoration:none;
+    text-decoration: none;
     display: block;
-    width: 200px;
-    margin: center;
     color: #1877f2;
-    padding-left: 80px;
-    font-weight: 400;
+    font-size: 14px;
+    margin: 10px 0;
+}
+
+.f-pws:hover {
+    text-decoration: underline;
 }
 
 .line {
@@ -116,14 +122,14 @@ input[type="password"] {
 }
 
 .sub-link {
-    width: 55vh;
-    position: relative;
     text-align: center;
-    color: rgb(61, 61, 61);
-    font-family: 'Segoe UI', Arial;
-    padding: 130px 890;
-    font-size: 14.5px;
-    font-weight: 600;
+    color: #1c1e21;
+    font-size: 14px;
+    margin-top: 10px;
+    padding: 20px;
+    max-width: 420px; 
+    margin-left: -30px;  
+    margin-right: auto; 
 }
 
 .sub-link a {

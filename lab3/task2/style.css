@@ -1,0 +1,150 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+}
+
+.header {
+    background-color: rgb(40, 39, 39);
+}
+
+.text {
+    color: #ffffff;
+    font-size: 25px;
+    padding-top: 25px;
+    padding-left: 5%;
+    margin: 0;
+    padding-bottom: 1%;
+}
+
+.hi {
+    position: relative;
+    top: 30px;
+    left: 600px;
+    width: 65%;
+    gap: 10px;
+}
+
+.container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+
+.todoForm {
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px; 
+}
+
+.todoForm label {
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.input-group {
+    display: flex;
+    gap: 0;
+}
+
+.input-group input {
+    flex: 1;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px 0 0 4px;
+    font-size: 16px;
+    outline: none;
+}
+
+.input-group input:focus {
+    border-color: #463d8d;
+}
+
+.input-group button {
+    padding: 12px 24px;
+    border: none;
+    background: #007bff;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.input-group button:hover {
+    background: #0056b3;
+}
+
+
+.todoList {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    list-style: none;
+}
+
+.todo-item {
+    display: flex;
+    margin-left: -13%;
+    justify-content: space-between;
+    padding: 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    background: #fafafa;
+    transition: all 0.2s;
+}
+
+.todo-item:hover {
+    background: #f0f0f0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.todo-item:last-child {
+    margin-bottom: 0;
+}
+
+.todo-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.todo-left input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.todo-text {
+    font-size: 16px;
+    color: #333;
+}
+
+.todo-text.done {
+    text-decoration: line-through;
+    color: #151414;
+}
+
+.delete-btn {
+    background-color: #ef4444;
+    color: white;
+    border: none;
+    padding: 0.3rem 0.6rem;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.delete-btn:hover {
+    background: #ff4444;
+    color: white;
+}
+

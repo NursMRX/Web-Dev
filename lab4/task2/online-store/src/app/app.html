@@ -1,0 +1,171 @@
+
+  <!-- ===== HEADER ===== -->
+  <header class="header">
+    <div class="container header-top">
+
+      <!-- Логотип -->
+      <div class="logo">
+        <a href="#">
+          <span class="logo-tz">Tech</span><span class="logo-zone">Zone</span>
+          <span class="logo-dot">●</span>
+        </a>
+      </div>
+
+      <!-- Поиск -->
+      <div class="search">
+        <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <input type="text" placeholder="Клавиатуры, мыши, наушники...">
+        <button>Найти</button>
+      </div>
+
+      <!-- Иконки -->
+      <div class="header-icons">
+        <a href="#" class="icon-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          <span>Reg</span>
+        </a>
+        <a href="#" class="icon-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><line x1="20" y1="8" x2="20" y2="14"/><line x1="23" y1="11" x2="17" y2="11"/></svg>
+          <span>Sign</span>
+        </a>
+        <a href="#" class="icon-btn cart-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+          <span>Like</span>
+          <span class="cart-badge">0</span>
+        </a>
+      </div>
+
+    </div>
+
+    <!-- Навигация -->
+    <nav class="navigation">
+      <div class="container">
+        <ul class="nav-list">
+          <li><a href="#"><span>⌨</span> Клавиатуры</a></li>
+          <li><a href="#"><span>🖱</span> Мыши</a></li>
+          <li><a href="#"><span>🎧</span> Наушники</a></li>
+          <li><a href="#"><span>🎙</span> Микрофоны</a></li>
+          <li><a href="#"><span>📷</span> Веб-камеры</a></li>
+          <li><a href="#"><span>🖱</span> Коврики</a></li>
+          <li><a href="#"><span>🖥</span> Мониторы</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ===== MAIN ===== -->
+  <main class="main">
+
+    <!-- Баннер -->
+    <section class="hero">
+      <div class="hero-grid-bg"></div>
+      <div class="hero-glow"></div>
+      <div class="container hero-content">
+        <h1>Лучшая периферия<br><span class="hero-accent">для твоего ПК</span></h1>
+        <p>Игровая и профессиональная периферия — от топовых брендов по честным ценам</p>
+        <div class="hero-actions">
+          <a href="#" class="btn-primary">Смотреть каталог</a>
+          <a href="#" class="btn-ghost">Акции недели →</a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat"><strong>2 500+</strong><span>Товаров</span></div>
+          <div class="stat-divider"></div>
+          <div class="stat"><strong>48ч</strong><span>Доставка</span></div>
+          <div class="stat-divider"></div>
+          <div class="stat"><strong>5 ★</strong><span>Рейтинг</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Продукты (Angular компонент) -->
+    <section class="products-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Популярные товары</h2>
+          <a href="#" class="see-all">Все товары →</a>
+        </div>
+        <app-list-product></app-list-product>
+      </div>
+    </section>
+
+    <!-- Преимущества -->
+    <section class="features-section">
+      <div class="container features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">🚀</div>
+          <h3>Быстрая доставка</h3>
+          <p>По Алмате за 1 день, по Казахстану за 2–5 дней</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🛡</div>
+          <h3>Официальная гарантия</h3>
+          <p>Гарантия производителя на все товары</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">💳</div>
+          <h3>Удобная оплата</h3>
+          <p>Карта, СБП, рассрочка 0%</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🔄</div>
+          <h3>Возврат 30 дней</h3>
+          <p>Без лишних вопросов</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container footer-content">
+
+      <div class="footer-brand">
+        <div class="logo footer-logo">
+          <span class="logo-tz">Tech</span><span class="logo-zone">Zone</span><span class="logo-dot">●</span>
+        </div>
+        <p>Онлайн-магазин компьютерной периферии. Всё для комфортной работы и игры.</p>
+        <div class="footer-socials">
+          <a href="#">VK</a>
+          <a href="#">TG</a>
+          <a href="#">YT</a>
+        </div>
+      </div>
+
+      <div class="footer-block">
+        <h3>Покупателям</h3>
+        <ul>
+          <li><a href="#">Доставка и оплата</a></li>
+          <li><a href="#">Гарантия и возврат</a></li>
+          <li><a href="#">Бонусная программа</a></li>
+          <li><a href="#">Помощь</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-block">
+        <h3>Каталог</h3>
+        <ul>
+          <li><a href="#">Клавиатуры</a></li>
+          <li><a href="#">Мыши</a></li>
+          <li><a href="#">Наушники</a></li>
+          <li><a href="#">Микрофоны</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-block">
+        <h3>Контакты</h3>
+        <p class="footer-contact"> support@techzone.ru</p>
+        <p class="footer-contact">📞 +7 (999) 123-45-67</p>
+        <p class="footer-contact">🕐 Пн–Вс 9:00–21:00</p>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <span>© 2026 TechZone. Все права защищены.</span>
+        <span>Политика конфиденциальности</span>
+      </div>
+    </div>
+  </footer>
+

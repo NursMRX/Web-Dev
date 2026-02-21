@@ -1,0 +1,49 @@
+<div class="products-wrapper">
+
+  <div class="product-grid" [class.expanded]="showAll">
+    @for (product of visibleProducts; track product.id) {
+      <div class="product-card">
+
+        <div class="card-image-wrap">
+          <img [src]="product.image" [alt]="product.name">
+          <span class="card-rating">⭐ {{ product.rating }}</span>
+        </div>
+
+        <div class="card-body">
+          <h3 class="card-name">{{ product.name }}</h3>
+          <p class="card-desc">{{ product.description }}</p>
+          <div class="card-footer">
+            <span class="price">{{ product.price }} ₸</span>
+            <div class="buttons">
+              <a [href]="product.link" target="_blank" class="btn-view">
+                Kaspi →
+              </a>
+              <button (click)="shareTelegram(product)" class="btn-share">
+                <!-- Иконка Telegram -->
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="16" height="16">
+                  <path d="M12 0C5.373 0 0 5.373 0 12c0 2.124.556 4.118 1.528 5.845L0 24l6.335-1.528C8.082 23.444 10.01 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm5.473 8.233l-1.802 8.485c-.136.592-.489.736-1 .457l-2.774-2.045-1.336 1.287c-.147.147-.269.269-.552.269l.198-2.781 5.062-4.572c.22-.198-.048-.308-.341-.11l-6.261 3.938-2.7-.844c-.586-.184-.598-.586.122-.866l10.552-4.065c.494-.192.928.11.769.866z"/>
+                </svg>
+                Share
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    }
+  </div>
+
+  <!-- Кнопка "Показать все" / "Свернуть" -->
+  @if (products.length > previewCount) {
+    <div class="toggle-wrap">
+      <button class="btn-toggle" (click)="toggleShowAll()">
+        @if (!showAll) {
+          Все товары ({{ products.length }}) ↓
+        } @else {
+          Свернуть ↑
+        }
+      </button>
+    </div>
+  }
+
+</div>

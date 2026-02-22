@@ -1,0 +1,62 @@
+:host { display: block; }
+
+/* ===== GRID ===== */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+  /* НЕТ max-height — скрытие через slice() в .ts, а не CSS */
+}
+
+/* ===== КНОПКА "ПОКАЗАТЬ ЕЩЁ" ===== */
+.toggle-wrap {
+  display: flex;
+  justify-content: center;
+  margin-top: 32px;
+}
+
+.btn-toggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 36px;
+  background: transparent;
+  border: 1px solid rgba(180, 100, 255, 0.4);
+  border-radius: 100px;
+  color: #c260ff;
+  font-family: 'Syne', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.25s;
+  letter-spacing: 0.5px;
+}
+
+.btn-toggle:hover {
+  background: rgba(194, 96, 255, 0.1);
+  border-color: #c260ff;
+  box-shadow: 0 0 20px rgba(194, 96, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+/* ===== ПУСТОЕ СОСТОЯНИЕ ===== */
+.empty-state {
+  text-align: center;
+  padding: 60px 20px;
+  color: #923dfa;
+}
+.empty-state span { font-size: 40px; display: block; margin-bottom: 12px; }
+.empty-state p    { font-size: 15px; }
+
+/* ===== АДАПТИВ ===== */
+@media (max-width: 768px) {
+  .product-grid {
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+}

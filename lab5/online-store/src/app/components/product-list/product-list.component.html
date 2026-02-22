@@ -1,0 +1,19 @@
+<!-- Есть товары → сетка -->
+@if (products.length > 0) {
+  <div class="product-grid">
+    @for (product of products; track product.id) {
+      <app-item-product
+        [product]="product"
+        (deleteProduct)="onDelete($event)"
+      />
+    }
+  </div>
+}
+
+<!-- Все удалены → сообщение -->
+@if (products.length === 0) {
+  <div class="empty-state">
+    <span></span>
+    <p>No products in this category</p>
+  </div>
+}

@@ -1,0 +1,251 @@
+:host {
+  --accent:   #c260ff;
+  --accent-2: #6a11cb;
+  --bg:       #100d20;
+  --border:   rgba(180, 100, 255, 0.15);
+  --text-1:   #f0eaff;
+  --text-2:   #9585b8;
+  --muted:    #5a4f78;
+  display: block;
+}
+
+/* ── Card ── */
+.product-card {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: border-color .3s, box-shadow .3s, transform .3s;
+  animation: card-in .4s ease both;
+  position: relative;
+}
+
+.product-card:hover {
+  border-color: rgba(194, 96, 255, 0.4);
+  box-shadow: 0 8px 36px rgba(130, 40, 220, 0.2);
+  transform: translateY(-4px);
+}
+
+.product-card.confirm-mode {
+  border-color: rgba(239, 68, 68, 0.45);
+}
+
+@keyframes card-in {
+  from { opacity: 0; transform: translateY(18px) scale(.97); }
+  to   { opacity: 1; transform: translateY(0)   scale(1);    }
+}
+
+/* ── Image ── */
+.card-img-wrap {
+  position: relative;
+  height: 200px;       
+  background: #0d0a1c;
+  overflow: hidden;
+  flex-shrink: 0;       /* не сжимается если текст длинный */
+}
+
+.card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; 
+  padding: 12px;
+  transition: transform .4s;
+  min-height: 100%;
+}
+
+.product-card:hover .card-img { transform: scale(1.05); }
+
+/* Likes badge */
+.likes-badge {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: rgba(0,0,0,.6);
+  color: #f15a85;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 3px 9px;
+  border-radius: 100px;
+  transition: transform .2s;
+}
+
+.likes-badge.pop {
+  animation: pop .4s ease;
+}
+
+@keyframes pop {
+  0%   { transform: scale(1); }
+  40%  { transform: scale(1.35); }
+  100% { transform: scale(1); }
+}
+
+/* ── Body ── */
+.card-body {
+  padding: 14px 16px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+}
+
+/* Stars */
+.card-stars { display: flex; align-items: center; gap: 2px; }
+.card-stars svg { width: 12px; height: 12px; }
+.rating-val {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--text-2);
+  margin-left: 4px;
+}
+
+/* Name / desc */
+.card-name {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-1);
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  margin: 0;
+}
+
+.card-desc {
+  font-size: 12px;
+  color: var(--muted);
+  line-height: 1.5;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  flex: 1;
+  margin: 0;
+}
+
+/* Price */
+.card-price {
+  font-family: 'Orbitron', monospace;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-1);
+}
+.currency { color: var(--accent); font-size: 14px; }
+
+/* ── Actions row ── */
+.card-actions {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-top: 4px;
+}
+
+/* Kaspi button */
+.btn-kaspi {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 8px 14px;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  border-radius: 8px;
+  color: #fff;
+  font-family: 'Syne', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: opacity .2s, transform .2s;
+  margin-right: auto; /* push icons to the right */
+}
+.btn-kaspi svg { width: 13px; height: 13px; }
+.btn-kaspi:hover { opacity: .85; transform: translateY(-1px); }
+
+/* Icon buttons (like / share / delete) */
+.btn-icon {
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all .2s;
+  flex-shrink: 0;
+}
+.btn-icon svg { width: 16px; height: 16px; }
+
+/* Like */
+.btn-like { color: #e43e3e; }
+.btn-like:hover, .btn-like.liked {
+  background: rgba(255, 50, 50, 0.12);
+  border-color: #fc5d5d;
+}
+
+/* WhatsApp */
+.btn-wa { color: #25d366; }
+.btn-wa:hover { background: rgba(37,211,102,.12); border-color: #25d366; }
+
+/* Telegram */
+.btn-tg { color: #29b6f6; }
+.btn-tg:hover { background: rgba(41,182,246,.12); border-color: #29b6f6; }
+
+/* Delete */
+.btn-delete { color: var(--muted); }
+.btn-delete:hover { color: #ef4444; background: rgba(239,68,68,.1); border-color: #ef4444; }
+
+/* ── Confirm box ── */
+.confirm-box {
+  background: rgba(239, 68, 68, 0.08);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  border-radius: 10px;
+  padding: 12px 14px;
+  animation: fade-in .2s ease;
+}
+
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.confirm-box p {
+  font-size: 13px;
+  font-weight: 600;
+  color: #fca5a5;
+  margin: 0 0 10px;
+}
+
+.confirm-btns { display: flex; gap: 8px; }
+
+.confirm-yes {
+  flex: 1;
+  padding: 8px;
+  background: rgba(239,68,68,.85);
+  border: none;
+  border-radius: 7px;
+  color: #fff;
+  font-family: 'Syne', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background .2s;
+}
+.confirm-yes:hover { background: #ef4444; }
+
+.confirm-no {
+  flex: 1;
+  padding: 8px;
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 7px;
+  color: var(--text-2);
+  font-family: 'Syne', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all .2s;
+}
+.confirm-no:hover { border-color: var(--accent); color: var(--text-1); }

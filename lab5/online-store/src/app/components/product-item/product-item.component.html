@@ -1,0 +1,119 @@
+<div class="product-card" [class.confirm-mode]="confirmDelete">
+
+  <!-- ── IMAGE ── -->
+  <div class="card-img-wrap">
+    <img [src]="product.image" [alt]="product.name" class="card-img" />
+
+    <!-- Likes badge -->
+    <div class="likes-badge" [class.pop]="likeAnimating">
+      ❤ {{ product.likes }}
+    </div>
+  </div>
+
+  <!-- ── BODY ── -->
+  <div class="card-body">
+
+    <div class="card-meta">
+      <div class="card-stars">
+        @for (filled of getStars(); track $index) {
+          <svg viewBox="0 0 24 24" [attr.fill]="filled ? '#f59e0b' : 'none'"
+               stroke="#f59e0b" stroke-width="1.5">
+            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02
+                             12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+          </svg>
+        }
+        <span class="rating-val">{{ product.rating }}</span>
+      </div>
+    </div>
+
+    <h3 class="card-name">{{ product.name }}</h3>
+    <p  class="card-desc">{{ product.description }}</p>
+
+    <div class="card-price">
+      {{ product.price }} <span class="currency">₸</span>
+    </div>
+
+    <!-- ── ACTIONS ── -->
+    <div class="card-actions">
+
+      <!-- Kaspi link -->
+      <a [href]="product.link" target="_blank" class="btn-kaspi">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+          <polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/>
+        </svg>
+        Kaspi
+      </a>
+
+      <!-- Like -->
+      <button class="btn-icon btn-like" [class.liked]="product.likes > 0"
+              (click)="onLike()" title="Нравится">
+        <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"
+             [attr.fill]="product.likes > 0 ? 'currentColor' : 'none'">
+          <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06
+                   a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78
+                   1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+        </svg>
+      </button>
+
+      <!-- WhatsApp -->
+      <button class="btn-icon btn-wa" (click)="shareWhatsApp()" title="WhatsApp">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15
+            -.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463
+            -2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606
+            .134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371
+            -.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51
+            -.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016
+            -1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487
+            .709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758
+            -.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+          <path d="M12 0C5.373 0 0 5.373 0 12c0 2.124.556 4.118 1.528 5.845L0 24
+            l6.335-1.528C8.082 23.444 10.01 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0z
+            m0 22c-1.848 0-3.57-.495-5.065-1.355l-.362-.215-3.762.908.924-3.671
+            -.236-.374A9.945 9.945 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10
+            -4.477 10-10 10z"/>
+        </svg>
+      </button>
+
+      <!-- Telegram -->
+      <button class="btn-icon btn-tg" (click)="shareTelegram()" title="Telegram">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12
+            A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14
+            a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502
+            -1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902
+            -1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91
+            .177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041
+            -.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48
+            -.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789
+            .027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014
+            3.332-1.386 4.025-1.627 4.476-1.635z"/>
+        </svg>
+      </button>
+
+      <!-- Delete -->
+      <button class="btn-icon btn-delete" (click)="onDeleteClick()" title="Удалить">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polyline points="3 6 5 6 21 6"/>
+          <path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"/>
+          <path d="M10 11v6"/><path d="M14 11v6"/>
+          <path d="M9 6V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2"/>
+        </svg>
+      </button>
+
+    </div>
+
+    <!-- ── CONFIRM DELETE ── -->
+    @if (confirmDelete) {
+      <div class="confirm-box">
+        <p>Are you sure?</p>
+        <div class="confirm-btns">
+          <button class="confirm-yes" (click)="confirmYes()">Yes, delete</button>
+          <button class="confirm-no"  (click)="confirmNo()">Cancel</button>
+        </div>
+      </div>
+    }
+
+  </div>
+</div>
